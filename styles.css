@@ -1,0 +1,92 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    row-gap: 0;
+    grid-gap: 10px;
+    background-color: aquamarine;
+    height: 70px;
+    padding: 15px;
+}
+
+.container > div {
+    justify-content: center;
+    text-align: start;
+    padding: 5;
+    font-size: small;
+    height: 20;
+    
+
+  }
+
+.container .child1 {
+    background-color: yellow;
+    grid-column: 1 / 3;
+    
+}
+
+.container .child2 {
+    background-color: blue;
+    grid-column: 3/ 6;
+}
+
+.container .child3 {
+    background-color: green;
+    grid-column: 6 / 8;
+}
+
+.container .child4 {
+    background-color: red;
+    grid-column: 5 / span 3;
+
+}
+
+@media only screen and (max-width: 700px) {
+        .container {
+          background-color: rgb(146, 13, 13);
+          /* padding: 10px; */
+          grid-template-columns: auto auto;
+          width: 100%;
+          grid-gap: 10px;
+          height: 100px;  
+        }
+        .container div {
+            font-size: 25px;
+            padding: 10px;
+            height: 25;
+        }
+
+
+        .container .child1 {
+            background-color: yellow;
+            grid-column: 1 / 4;
+            margin-left: 10px;
+            color: darkorchid;
+            
+        }
+        .container .child3 { 
+            background-color: rgb(6, 117, 6);
+            grid-area: 1/4/1/7;
+            
+        }
+        .container .child2 {
+            background-color: blue;
+            grid-column: 2 / span 4;
+   
+        }
+       
+        .container .child4 {
+           display: none;
+            
+        }
+
+
+      }
+   
+
+
+
